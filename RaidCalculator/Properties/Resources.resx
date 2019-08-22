@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HelpContent" xml:space="preserve">
+    <value>&lt;!DOCTYPE html &gt;&lt;html&gt;&lt;meta http-equiv='Content-Type' content='text/html;charset=UTF-8'&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;
+
+&lt;div id="content" class="ef-article"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-9"&gt;
+                &lt;div id="default-tab" class="tab-active page-content-tab"&gt;
+
+
+                    
+                                                                                    
+&lt;link rel="stylesheet" type="text/css" href="/css/calc-raid2.css"&gt;
+&lt;link href="/css/lightbox.css" rel="stylesheet"&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="/css/newkorp.css"&gt; 
+&lt;link rel="stylesheet" href="/local/templates/inner_new/css/jquery-ui.css"&gt;
+
+  
+&lt;p align="justify"&gt;Реализация дисковых подсистем может быть довольно 
+
+разнообразная: могут использоваться локальные диски, подключенные к встроенному 
+
+контроллеру, или использоваться внешний контроллер, а также могут использоваться 
+
+системы SAN (СХД, Storage). Но во всех способах реализации диски объединяются в 
+
+логические пулы, которые называются RAID-массивами. Такое объединение решает в 
+
+основном вопрос сохранности данных, т.е. в случае выхода из строя одного из 
+
+дисков логического массива – он продолжает работать без остановки сервиса, а 
+
+главное без потери данных. А также объединение дисков в пул может решать вопрос 
+
+производительности пула, например, RAID 0 значительно увеличивает скорость 
+
+чтения, но при этом увеличивает вероятность выхода из строя массива.&lt;/p&gt;
+&lt;p align="justify"&gt;Итак, &lt;b&gt;RAID&lt;/b&gt; – это технология виртуализации данных, 
+
+которая объединяет несколько дисков в логический элемент для повышения 
+
+отказоустойчивости и повышения производительности.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;&lt;span&gt;IOPS&lt;/span&gt;&lt;/h2&gt;
+
+
+&lt;p align="justify"&gt;Важным показателем производительности дисковой подсистемы 
+
+является количество элементарных операций в единицу времени (IOPS), которые 
+
+может выполнить диск. Для дисковой подсистемы это операции чтения и записи 
+
+данных. При планировании нагрузки для дисковой подсистемы важно представлять, 
+
+какую нагрузку будет давать тот или иной сервис на дисковую подсистему. Обычно 
+
+такие значения выводятся эмпирическим путем согласно уже полученного опыта на 
+
+подобных проектах. &lt;/p&gt;
+&lt;p align="justify"&gt;Поэтому рассчитывая количество дисков и тип RAID-массива, 
+
+важно обращать внимание на нагрузку по IOPS. Важно заметить, что считается общее 
+
+количество IOPS, которые потом нужно разделить на операции чтения и операции 
+
+записи, так, например, на СУБД серверах разделение будет 80% на запись и 20% на 
+
+чтение, а на файловых серверах наоборот 70% чтения и 30% записи, но все зависит 
+
+от сервиса, который будет размещаться. Также стоит заметить, что значение IOPS 
+
+для каждого диска, приведенные ниже в Таблице 1, приблизительные, поскольку 
+
+разные операции дают разную нагрузку, например, последовательная запись блоками 
+
+данных по 4к даст значительно больший показатель IOPS, чем случайное чтение 
+
+блоками по 128К. Кроме того, производительность дисковой подсистемы измеряется 
+
+не только количеством IOPS, но и очередью диска, откликом и другими счетчиками, 
+
+о которых мы расскажем чуть ниже. &lt;/p&gt;
+&lt;div class="table-wrapp-xs"&gt;
+&lt;table align="center" width="95%" border="1" cellpadding="1" cellspacing="1"&gt;
+        &lt;tbody&gt;
+            &lt;tr bgcolor="#ffd205"&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px 
+
+solid rgb(0, 0, 10);"&gt;&lt;b&gt;Диск&lt;/b&gt;&lt;/td&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px 
+
+solid rgb(0, 0, 10);"&gt;&lt;b&gt;Количество IOPS&lt;/b&gt;&lt;/td&gt;
+             
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;SATA 7200&lt;/td&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;100&lt;/td&gt;
+                
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;SAS 10000&lt;/td&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;140&lt;/td&gt;
+                
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;SAS 15000&lt;/td&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;210&lt;/td&gt;
+                 
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;SSD&lt;/td&gt;
+                &lt;td style="text-align: center; padding: 0.5cm; border: 1px solid 
+
+rgb(0, 0, 10);"&gt;8600&lt;/td&gt;
+              
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt; &lt;/div&gt;
+&lt;br&gt;
+&lt;p align="center"&gt;Таблица 1. Примерное значение IOPS в разрезе дисков&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p align="justify"&gt;Также в расчете IOPS для RAID-массивов использовались 
+
+пенальти для каждого типа массива. Например, в RAID 1 для записи данных 
+
+происходит две операции на один диск и на второй диск, поэтому такой массив 
+
+имеет пенальти 2.  В RAID 5 для записи данных происходит 4 операции: чтение 
+
+данных, чтение четности RAID, запись данных, запись четности, поэтому пенальти 
+
+составляет 4. Для массивов 50, 60, 61 рассчитывался кумулятивный эффект для 
+
+составляющих RAID массивов. Значение пенальти Raid приведены в Таблице 2. &lt;/p&gt;
+&lt;br&gt;
+ 
+ 
+
+&lt;h2&gt;&lt;span&gt;Виды RAID-массивов&lt;/span&gt;&lt;/h2&gt;
+&lt;p align="justify"&gt;Существует несколько распространенных разновидностей RAID 
+
+Массивов (см. Таблицу 2).&lt;/p&gt;
+ &lt;div class="responsive-table"&gt;
+&lt;table align="center" width="95%" border="1" cellpadding="1" cellspacing="1"&gt;
+        &lt;tbody&gt;
+            &lt;tr bgcolor="#ffd205"&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 10);"&gt; 
+
+&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;&lt;b&gt;Кол-во дисков&lt;/b&gt;&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;&lt;b&gt;Кол-во вышедших из строя дисков&lt;/b&gt;&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;&lt;b&gt;Скорость записи&lt;/b&gt;&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;&lt;b&gt;Скорость чтения&lt;/b&gt;&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;&lt;b&gt;Описание&lt;/b&gt;&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;&lt;b&gt;RAID пенальти&lt;/b&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;RAID 0&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 2&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Нет&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Информация разбивается на блоки данных фиксированной длины и записывается 
+
+на оба/несколько дисков поочередно.&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;1&lt;/td&gt;   
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;RAID 1&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 2&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;1&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Не меняется по сравнению с использованием одного диска.&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Данные пишутся и на один диск, и на второй (зеркалируются).&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;2&lt;/td&gt;   
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;RAID 5&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 3&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;1&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Низкая&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Блоки данных и контрольные суммы циклически записываются на все диски 
+
+массива.&lt;/td&gt;   
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;4&lt;/td&gt;   
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;RAID 6&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 4&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;2&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Низкая&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Блоки данных и контрольные суммы циклически записываются на все диски 
+
+массива, но контрольных суммы две.&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;6&lt;/td&gt;          
+            &lt;/tr&gt;
+ &lt;tr&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;RAID 10&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 4&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 1 до N/2 дисков в пределах разных зеркал.&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Зеркалированный массив, данные в котором записываются последовательно на 
+
+несколько дисков, как в RAID 0. Эта архитектура представляет собой массив типа 
+
+RAID 0, сегментами которого вместо отдельных дисков являются массивы RAID 1. 
+
+&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;2&lt;/td&gt;          
+            &lt;/tr&gt;
+ &lt;tr&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;RAID 50&lt;/td&gt;
+
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 6&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;от 1 до 2 дисков, если выйдет одинаковое количество дисков в разных 
+
+страйпах.&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Высокая&lt;/td&gt;
+&lt;td style="text-align: justify; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;Массив, данные в котором записываются последовательно на несколько дисков, 
+
+как в RAID 0. Однако сегментами его вместо отдельных дисков являются массивы 
+
+RAID 5.&lt;/td&gt;
+&lt;td style="text-align: center; padding: 5px; border: 1px solid rgb(0, 0, 
+
+10);"&gt;4&lt;/td&gt;          
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt; &lt;/div&gt;
+&lt;br&gt;
+&lt;p align="center"&gt;Таблица 2. Наиболее распространенные типы RAID-массивов&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+
+&lt;p align="justify"&gt;RAID 60 и 61 являются комбинированием RAID-массивов 0 и 1 
+
+соответственно, сегментами которого вместо отдельных дисков являются массивы 
+
+RAID 6. Такие массивы наследуют все преимущества и недостатки  составляющих их 
+
+RAID-массивов. На практике наиболее распространенными RAID-массивами являются 
+
+RAID 1, RAID 5 и RAID 10.&lt;/p&gt;
+
+ &lt;br&gt;
+&lt;h2&gt;&lt;span&gt;Показатели производительности дисковой подсистемы&lt;/span&gt;&lt;/h2&gt;
+&lt;p align="justify"&gt;Проверка производительности дисковой подсистемы должна 
+
+проводиться на основе следующих показателей:&lt;/p&gt;
+&lt;p align="justify"&gt;&lt;b&gt;% Активности диска&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Показывает процент общей загруженности диска. Представляет из 
+
+себя сумму значений счетчиков - процент активности диска при чтении и процент 
+
+активности диска при записи. При использовании RAID-массивов часто можно увидеть 
+
+значения этого счетчика больше 100%.&lt;/p&gt;
+&lt;p align="justify"&gt;&lt;b&gt;% Бездействия диска&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Показывает время простоя диска, т.е. время, в течении 
+
+которого диск оставался в состоянии покоя, не обрабатывая операции чтения
+
+\записи. В отличии от предыдущего показателя лежит строго в диапазоне от 100% 
+
+(полный покой) до 0% (полная загрузка).&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Обращений к диску&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Этот показатель как раз и показывает количество IOPS. 
+
+Предельные значения как раз и указаны в расчетах. Показатель можно 
+
+детализировать на обращения к диску при записи и при чтении.&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Среднее время обращения к диску&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Среднее время в секундах, требуемое для выполнения диском 
+
+одной операции чтения или записи. Складывается из значений времени на обращение 
+
+при чтении и времени на обращение при записи.&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Средняя длина очереди диска&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Средняя длина очереди диска отображает количество операций 
+
+диска, поставленное в очередь за определенный интервал времени. Это значение 
+
+рассчитывается на основе закона Литтла, согласно которому количество запросов, 
+
+ожидающих обработки, в среднем равняется частоте поступления запросов, 
+
+умноженной на время обработки запроса.&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Текущая длина очереди диска&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Показывает количество операций с диском, которые ожидают 
+
+обработки на текущий момент времени.&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Скорость обмена с диском&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Значение, которое показывает среднее количество байт на 
+
+чтение/запись, отправленных на диск за одну секунду.&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Средний размер одного обмена с диском&lt;/b&gt;&lt;/p&gt;
+
+&lt;p align="justify"&gt;Количество байт, передаваемое за одну IOPS. Определяется как 
+
+среднеарифметическое за период времени.&lt;/p&gt;
+
+&lt;p align="justify"&gt;&lt;b&gt;Расщеплений ввода/вывода на диск&lt;/b&gt;&lt;/p&gt;
+&lt;p align="justify"&gt;Частота разбиения операций записи/чтения на несколько 
+
+операций. В случае большой фрагментации диска будут запрашиваться большие блоки 
+
+и вызывать увеличение показателя.&lt;/p&gt;
+&lt;br&gt;
+&lt;div class="slider-separator"&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;p align="justify"&gt;Таким образом, для правильной архитектуры дисковой подсистемы 
+
+важно сформировать требования к отказоустойчивости массива, которые зависят от 
+
+важности размещенной на дисках информации, а также спрогнозировать 
+
+приблизительную нагрузку в IOPS для формирования надежной и производительной 
+
+масштабируемой системы.&lt;/p&gt;
+ &lt;p align="justify"&gt;Сервисы на базе платформы 1С при работе с диском генерируют 
+
+значительно большее количество операций записи, чем чтения, поэтому для 
+
+максимального быстродействия дисковая подсистема должна иметь наибольшее 
+
+количество IOPS и наименьшее значение пенальти для RAID-массива.&lt;/p&gt;
+&lt;p align="justify"&gt;&lt;b&gt;Мы в своей работе рекомендуем использовать следующие RAID 
+
+массивы:&lt;/b&gt;&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;RAID 1 для формирования дисковой подсистемы для ОС.&lt;/li&gt;
+&lt;li&gt;RAID 10 для хранения 1С баз и данных, требования к скорости записи у которых 
+
+высокие.&lt;/li&gt;
+&lt;li&gt; RAID 5 для хранения файловых данных.&lt;/li&gt;&lt;/ul&gt;                                         &lt;div style="clear:both"&gt;&lt;/div&gt;
+                    &lt;br&gt;&lt;br&gt;
+                                            &lt;div class="avatar-block"&gt;
+                                                        &lt;p&gt;&lt;b&gt;EFSOL &lt;/b&gt;&lt;/p&gt;
+                            &lt;p&gt;
+                                Системная интеграция. Консалтинг&lt;br&gt;                            &lt;/p&gt;
+                        &lt;/div&gt;
+                                                        &lt;/div&gt;
+                
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+</root>

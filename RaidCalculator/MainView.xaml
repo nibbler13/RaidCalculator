@@ -1,0 +1,196 @@
+﻿<Window x:Class="RaidCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaidCalculator"
+        mc:Ignorable="d"
+        Title="RAID-калькулятор" 
+        ResizeMode="NoResize" 
+        Width="287"
+        Height="432"
+        WindowStartupLocation="CenterScreen" Icon="icon.ico" >
+
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+    
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Уровень RAID" 
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+        <Border Grid.Row="1"
+                Height="5"
+                Background="#ffabd047"
+                Margin="0,4,0,0"/>
+        
+        <TextBlock Text="Тип диска"
+                   Grid.Column="2"
+                   HorizontalAlignment="Center"
+                   FontWeight="Bold"/>
+        <Border Grid.Row="1"
+                Grid.Column="2"
+                Height="5"
+                Background="#ffabd047"
+                Margin="0,4,0,0"/>
+        
+        <RadioButton Content="RAID 0"
+                     Grid.Row="2"
+                     Margin="0,10,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid0}"/>
+        <RadioButton Content="RAID 1"
+                     Grid.Row="3"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid1}"/>
+        <RadioButton Content="RAID 5"
+                     Grid.Row="4"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid5}"/>
+        <RadioButton Content="RAID 6"
+                     Grid.Row="5"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid6}"/>
+        <RadioButton Content="RAID 10"
+                     Grid.Row="6"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid10}"/>
+        <RadioButton Content="RAID 50"
+                     Grid.Row="7"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid50}"/>
+        <RadioButton Content="RAID 60"
+                     Grid.Row="8"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid60}"/>
+        <RadioButton Content="RAID 61"
+                     Grid.Row="9"
+                     Margin="0,6,0,0"
+                     GroupName="RaidLevel"
+                     IsChecked="{Binding RadioButtonRaid61}"/>
+
+        <RadioButton Content="SATA 7200 RPM"
+                     Grid.Row="2"
+                     Grid.Column="2"
+                     Margin="0,10,0,0"
+                     GroupName="DiskType"
+                     IsChecked="{Binding RadioButtonDisk7200}"/>
+        <RadioButton Content="SATA 10000 RPM"
+                     Grid.Row="3"
+                     Grid.Column="2"
+                     Margin="0,6,0,0"
+                     GroupName="DiskType"
+                     IsChecked="{Binding RadioButtonDisk10000}"/>
+        <RadioButton Content="SATA 15000 RPM"
+                     Grid.Row="4"
+                     Grid.Column="2"
+                     Margin="0,6,0,0"
+                     GroupName="DiskType"
+                     IsChecked="{Binding RadioButtonDisk15000}"/>
+        <RadioButton Content="SSD"
+                     Grid.Row="5"
+                     Grid.Column="2"
+                     Margin="0,6,0,0"
+                     GroupName="DiskType"
+                     IsChecked="{Binding RadioButtonDiskSSD}"/>
+
+        <TextBlock Text="Количество дисков"
+                   Grid.Row="6"
+                   Grid.Column="2"
+                   FontWeight="Bold"
+                   Margin="0,6,0,0"/>
+        <TextBox Grid.Row="7"
+                 Grid.Column="2"
+                 Margin="0,6,0,0"
+                 Text="{Binding TextBoxDiskCount}"
+                 TextChanged="TextBox_TextChanged"/>
+
+        <TextBlock Text="Объем дисков (ГБ)"
+                   Grid.Row="8"
+                   Grid.Column="2"
+                   FontWeight="Bold"
+                   Margin="0,6,0,0"/>
+        <TextBox Grid.Row="9"
+                 Grid.Column="2"
+                 Margin="0,6,0,0"
+                 Text="{Binding TextBoxDiskSize}"
+                 TextChanged="TextBox_TextChanged"/>
+
+        <TextBlock Text="Чтение / Запись:"
+                   Grid.Row="10"
+                   FontWeight="Bold"
+                   Margin="0,10,0,0"/>
+        <TextBlock Text="{Binding TextBlockReadWrite}"
+                   Grid.Row="10"
+                   Grid.Column="2"
+                   Margin="0,10,0,0"/>
+
+        <Slider Grid.Row="11"
+                Grid.ColumnSpan="3"
+                Value="{Binding SliderReadWrite}"
+                Minimum="0"
+                Maximum="100"/>
+
+        <TextBlock Text="Результат расчета:"
+                   Grid.Row="12"
+                   Grid.ColumnSpan="3"
+                   FontWeight="Bold"
+                   Margin="0,10,0,0"/>
+        <Border Grid.Row="13"
+                Grid.ColumnSpan="3"
+                Height="5"
+                Background="#ffabd047"
+                Margin="0,4,0,0"/>
+
+        <TextBlock Text="Объем&#x0a;Массива (ГБ):"
+                   Grid.Row="14"
+                   FontWeight="Bold"
+                   Margin="0,10,0,0"/>
+        <TextBlock Text="{Binding TextBlockRaidSize}"
+                   Grid.Row="14"
+                   Grid.Column="2"
+                   Margin="0,10,0,0"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Text="Количество&#x0a;IOPS:"
+                   Grid.Row="15"
+                   FontWeight="Bold"
+                   Margin="0,10,0,0"/>
+        <TextBlock Text="{Binding TextBlockIOPS}"
+                   Grid.Row="15"
+                   Grid.Column="2"
+                   Margin="0,10,0,0"
+                   VerticalAlignment="Center"/>
+    </Grid>
+</Window>
