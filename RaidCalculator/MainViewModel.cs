@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -17,7 +18,7 @@ namespace RaidCalculator {
 				return;
 
 			RaidCalcFunc.RaidType raidType;
-			RaidCalcFunc.DiskType diskType;
+			int diskIOPS;
 
 			if (RadioButtonRaid0)
 				raidType = RaidCalcFunc.RaidType.Raid0;
@@ -39,18 +40,18 @@ namespace RaidCalculator {
 				return;
 
 			if (RadioButtonDisk7200)
-				diskType = RaidCalcFunc.DiskType.Disk7200;
+				diskIOPS = disk7200IOPS;
 			else if (RadioButtonDisk10000)
-				diskType = RaidCalcFunc.DiskType.Disk10000;
+				diskIOPS = disk10000IOPS;
 			else if (RadioButtonDisk15000)
-				diskType = RaidCalcFunc.DiskType.Disk15000;
+				diskIOPS = disk15000IOPS;
 			else if (RadioButtonDiskSSD)
-				diskType = RaidCalcFunc.DiskType.SSD;
+				diskIOPS = diskSSDIOPS;
 			else
 				return;
 
 			try {
-				string[] array = RaidCalcFunc.Calc(raidType, diskType, textBoxDiskCount, textBoxDiskSize, sliderReadWrite);
+				string[] array = RaidCalcFunc.Calc(raidType, diskIOPS, textBoxDiskCount, textBoxDiskSize, sliderReadWrite);
 				TextBlockRaidSize = array[0];
 				TextBlockIOPS = array[1];
 			} catch (Exception e) {
@@ -203,15 +204,99 @@ namespace RaidCalculator {
 		}
 
 
+
+
+		private int disk7200IOPS;
+		public string Disk7200IOPS {
+			get { return disk7200IOPS.ToString("N0", CultureInfo.CurrentCulture); }
+			set {
+				if (!int.TryParse(value.Replace(" ", string.Empty), out int valueRet))
+					return;
+
+				if (disk7200IOPS != valueRet) {
+					if (valueRet > 9999999)
+						disk7200IOPS = 9999999;
+					else
+						disk7200IOPS = valueRet;
+
+					NotifyPropertyChanged();
+				}
+			}
+		}
+
+		private int disk10000IOPS;
+		public string Disk10000IOPS {
+			get { return disk10000IOPS.ToString("N0", CultureInfo.CurrentCulture); }
+			set {
+				if (!int.TryParse(value.Replace(" ", string.Empty), out int valueRet))
+					return;
+
+				if (disk10000IOPS != valueRet) {
+					if (valueRet > 9999999)
+						disk10000IOPS = 9999999;
+					else
+						disk10000IOPS = valueRet;
+
+					NotifyPropertyChanged();
+				}
+			}
+		}
+
+		private int disk15000IOPS;
+		public string Disk15000IOPS {
+			get { return disk15000IOPS.ToString("N0", CultureInfo.CurrentCulture); }
+			set {
+				if (!int.TryParse(value.Replace(" ", string.Empty), out int valueRet))
+					return;
+
+				if (disk15000IOPS != valueRet) {
+					if (valueRet > 9999999)
+						disk15000IOPS = 9999999;
+					else
+						disk15000IOPS = valueRet;
+
+					NotifyPropertyChanged();
+				}
+			}
+		}
+
+		private int diskSSDIOPS;
+		public string DiskSSDIOPS {
+			get { return diskSSDIOPS.ToString("N0", CultureInfo.CurrentCulture); }
+			set {
+				if (!int.TryParse(value.Replace(" ", string.Empty), out int valueRet))
+					return;
+
+				if (diskSSDIOPS != valueRet) {
+					if (valueRet > 9999999)
+						diskSSDIOPS = 9999999;
+					else
+						diskSSDIOPS = valueRet;
+
+					NotifyPropertyChanged();
+				}
+			}
+		}
+
+
+
+
+
+
+
 		private int textBoxDiskCount;
 		public string TextBoxDiskCount {
-			get { return textBoxDiskCount.ToString(); }
+			get { return textBoxDiskCount.ToString("N0", CultureInfo.CurrentCulture); }
 			set {
-				if (!textBoxDiskCount.Equals(value.ToString())) {
-					if (!int.TryParse(value.ToString(), out int valueRet))
-						return;
+				if (!int.TryParse(value.Replace(" ", string.Empty), out int valueRet))
+					return;
 
-					textBoxDiskCount = valueRet;
+				if (textBoxDiskCount != valueRet) {
+					if (valueRet > 9999999)
+						textBoxDiskCount = 9999999;
+					else
+						textBoxDiskCount = valueRet;
+
 					NotifyPropertyChanged();
 				}
 			}
@@ -219,13 +304,17 @@ namespace RaidCalculator {
 
 		private int textBoxDiskSize;
 		public string TextBoxDiskSize {
-			get { return textBoxDiskSize.ToString(); }
+			get { return textBoxDiskSize.ToString("N0", CultureInfo.CurrentCulture); }
 			set {
-				if (!textBoxDiskSize.Equals(value.ToString())) {
-					if (!int.TryParse(value.ToString(), out int valueRet))
-						return;
+				if (!int.TryParse(value.Replace(" ", string.Empty), out int valueRet))
+					return;
 
-					textBoxDiskSize = valueRet;
+				if (textBoxDiskSize != valueRet) {
+					if (valueRet > 9999999)
+						textBoxDiskSize = 9999999;
+					else
+						textBoxDiskSize = valueRet;
+
 					NotifyPropertyChanged();
 				}
 			}
@@ -281,13 +370,16 @@ namespace RaidCalculator {
 
 
 
-
 		public MainViewModel() {
 			RadioButtonRaid0 = true;
 			RadioButtonDisk7200 = true;
 			TextBoxDiskCount = "2";
 			TextBoxDiskSize = "10000";
 			SliderReadWrite = 20;
+			Disk7200IOPS = "120";
+			Disk10000IOPS = "140";
+			Disk15000IOPS = "210";
+			DiskSSDIOPS = "8600";
 		}
 	}
 }

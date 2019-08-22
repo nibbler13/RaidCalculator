@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,12 +26,12 @@ namespace RaidCalculator {
 			SSD
 		}
 
-		private static Dictionary<DiskType, double> dictIOPS = new Dictionary<DiskType, double> {
-			{ DiskType.Disk7200, 120 },
-			{ DiskType.Disk10000, 140 },
-			{ DiskType.Disk15000, 210 },
-			{ DiskType.SSD, 8600 }
-		};
+		//private static Dictionary<DiskType, double> dictIOPS = new Dictionary<DiskType, double> {
+		//	{ DiskType.Disk7200, 120 },
+		//	{ DiskType.Disk10000, 140 },
+		//	{ DiskType.Disk15000, 210 },
+		//	{ DiskType.SSD, 8600 }
+		//};
 
 		private static Dictionary<RaidType, int> dictDisksMinQuantity = new Dictionary<RaidType, int> {
 			{ RaidType.Raid0, 2 },
@@ -55,7 +56,7 @@ namespace RaidCalculator {
 		};
 
 		public static string[] Calc(RaidType raidType,
-						  DiskType diskType,
+						  int diskIOPS,
 						  int diskCount,
 						  int diskSize,
 						  int readWrite) {
@@ -69,44 +70,47 @@ namespace RaidCalculator {
 					raidIOPS = "Введите корректное" + Environment.NewLine +
 						"количество дисков";
 				} else {
+					double raidSizeValue = 0;
+
 					switch (raidType) {
 						case RaidType.Raid0:
-							raidSize = (diskSize * diskCount).ToString();
+							raidSizeValue = diskSize * diskCount;
 							break;
 						case RaidType.Raid1:
-							raidSize = diskSize.ToString();
+							raidSizeValue = diskSize;
 							break;
 						case RaidType.Raid5:
-							raidSize = (diskSize * (diskCount - 1)).ToString();
+							raidSizeValue = diskSize * (diskCount - 1);
 							break;
 						case RaidType.Raid6:
-							raidSize = (diskSize * (diskCount - 2)).ToString();
+							raidSizeValue = diskSize * (diskCount - 2);
 							break;
 						case RaidType.Raid10:
-							raidSize = (diskSize * ((double)diskCount / 2.0d)).ToString();
+							raidSizeValue = diskSize * ((double)diskCount / 2.0d);
 							break;
 						case RaidType.Raid50:
-							raidSize = (diskSize * (diskCount - 2)).ToString();
+							raidSizeValue = diskSize * (diskCount - 2);
 							break;
 						case RaidType.Raid60:
-							raidSize = (diskSize * (diskCount - 4)).ToString();
+							raidSizeValue = diskSize * (diskCount - 4);
 							break;
 						case RaidType.Raid61:
-							raidSize = (diskSize * (double)(diskCount - 2) / 2.0d).ToString();
+							raidSizeValue = diskSize * (double)(diskCount - 2) / 2.0d;
 							break;
 						default:
 							break;
 					}
 
-					double minlIOPS = diskCount * dictIOPS[diskType] / dictRaidPenalty[raidType];
-					double maxIOPS = diskCount * dictIOPS[diskType];
+					double minlIOPS = diskCount * (double)diskIOPS / dictRaidPenalty[raidType];
+					double maxIOPS = diskCount * (double)diskIOPS;
 					double onePercentPenalty = (maxIOPS - minlIOPS) / 100.0d;
-					int raidIOPSValue = (int)(minlIOPS + onePercentPenalty * readWrite);
+					double raidIOPSValue = minlIOPS + onePercentPenalty * readWrite;
 
 					if (raidType == RaidType.Raid50 || raidType == RaidType.Raid60)
 						raidIOPSValue *= 2;
 
-					raidIOPS = raidIOPSValue.ToString();
+					raidSize = raidSizeValue.ToString("N0", CultureInfo.CurrentCulture);
+					raidIOPS = raidIOPSValue.ToString("N0", CultureInfo.CurrentCulture);
 				}
 			} catch (Exception e) {
 				MessageBox.Show(e.Message + Environment.NewLine + e.StackTrace, "", 
