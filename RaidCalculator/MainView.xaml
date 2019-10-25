@@ -117,7 +117,7 @@
                  TextAlignment="Right"
                  TextChanged="TextBox_TextChanged"/>
         
-        <RadioButton Content="SATA 10000 RPM"
+        <RadioButton Content="SAS 10000 RPM"
                      Grid.Row="3"
                      Grid.Column="2"
                      Margin="0,6,0,0"
@@ -130,7 +130,7 @@
                  TextAlignment="Right"
                  TextChanged="TextBox_TextChanged"/>
         
-        <RadioButton Content="SATA 15000 RPM"
+        <RadioButton Content="SAS 15000 RPM"
                      Grid.Row="4"
                      Grid.Column="2"
                      Margin="0,6,0,0"
